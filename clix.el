@@ -20,7 +20,8 @@
 (require 'seq)
 (require 'subr-x)
 
-(defvar argi)
+;; `argi' is dynamically bound by `command-line-functions'.
+(with-no-warnings (defvar argi))
 (defvar command-line-args-left)
 (defvar clix--entries nil "Registered entries for `clix-help'.")
 
